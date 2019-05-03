@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: netshoot
+  name: netshoot
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      run: netshoot
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: netshoot
+    spec:
+      containers:
+      - command: ["sleep", "99999"]
+        image: nicolaka/netshoot
+        name: netshoot
+        resources: {}
+      hostNetwork: True
+    securityContext:
+      privileged: true
+
+status: {}
