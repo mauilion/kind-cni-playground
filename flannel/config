@@ -4,7 +4,7 @@ nodes:
 - role: control-plane
   extraMounts:
   - containerPath: /kind/manifests/default-cni.yaml
-    hostPath: /tmp/kube-flannel.yaml
+    hostPath: /tmp/cni/kube-flannel.yaml
     readOnly: true
     type: File
 - role: worker

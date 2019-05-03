@@ -4,7 +4,7 @@ nodes:
 - role: control-plane
   extraMounts:
   - containerPath: /kind/manifests/default-cni.yaml
-    hostPath: /tmp/manifests/calico.yaml
+    hostPath: /tmp/cni/calico.yaml
     readOnly: true
     type: File
 - role: worker

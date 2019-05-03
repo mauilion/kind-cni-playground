@@ -4,7 +4,7 @@ nodes:
 - role: control-plane
   extraMounts:
   - containerPath: /kind/manifests/default-cni.yaml
-    hostPath: /tmp/manifests/canal.yaml
+    hostPath: /tmp/cni/canal.yaml
     readOnly: true
     type: File
 - role: worker
